@@ -1,8 +1,6 @@
 function dydt = GPdydt(t,tf,y,Im,IL,Ip,Ig,kc,qc,qmb,kmb,Tout,rp,rg,k4)
   dydt = zeros(8,1);
-  T=torque(t); Ff=T/rp; T=T/(5e3*t+1e-10);
-  %qc=qc_function(t);qc=6*qc; % 6 Rolamentos
-  %qmb=0.2*sqrt(kmb/(rp^2/Ip+rg^2/Ig));
+  T=torque(t); Ff=T/rp; T=T/(5e3*t+1e-10); % Tempo inicial ligeiramente diferente de zero para não dar problema no algoritmo
   dydt(1) = y(5);
   dydt(2) = y(6);
   dydt(3) = y(7);

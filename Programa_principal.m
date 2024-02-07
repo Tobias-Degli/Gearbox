@@ -1,6 +1,6 @@
 clc
 clear
-%close all
+close all
 
 load('data.mat');
 % Definindo o tempo
@@ -37,27 +37,17 @@ end
 yy1=360*interpolacao(t1,y1,n-1)/4000;
 yy2=360*interpolacao(t1,y2,n-1)/4000;
 
-% Velocidade pelo método das diferenças finitas avançada
-% for i=1:n-2
-    % dyy1(i)=(yy1(i+1)-yy1(i))/(t(i+1)-t(i));
-    % dyy2(i)=(yy2(i+1)-yy2(i))/(t(i+1)-t(i));
-% end
-
 % Velocidade por derivação por método numérico via MATLAB
 dyy1=n*diff(yy1)/duracao;
 dyy2=n*diff(yy2)/duracao;
 
-% média móvel para suavizar a curva
 % media móvel ajuda para limpar o sinal por ter muitas amostras
 dyy1m=n*diff(movmean(yy1,n/500))/duracao;
 dyy2m=n*diff(movmean(yy2,n/500))/duracao;
-% 
 
-% % Filtro de dados (Remove ruído dos dados iniciais da velocidade)
+% Filtro de dados (Remove ruído dos dados iniciais da velocidade)
 yy1=filtro(yy1,n); nn=size(yy1); t_y1=(0:incr_t:nn*incr_t);
 yy2=filtro(yy2,n); nn=size(yy2); t_y2=(0:incr_t:nn*incr_t);
-% dyy1m=filtro(dyy1m,n); nn=size(dyy1m); t_dm1=(0:incr_t:nn*incr_t);
-% dyy2m=filtro(dyy2m,n); nn=size(dyy2m); t_dm2=(0:incr_t:nn*incr_t);
 dyy1=filtro(dyy1,n); nn=size(dyy1); t_d1=(0:incr_t:nn*incr_t);
 dyy2=filtro(dyy2,n); nn=size(dyy2); t_d2=(0:incr_t:nn*incr_t);
 
@@ -67,8 +57,6 @@ tensao_desligado=data.Dev1_ai14(100:500); tensao_desligado=mean(tensao_desligado
 tensao_ligado=data.Dev1_ai14; corrente=(tensao_ligado-tensao_desligado)/0.1;
 I=corrente; V=24; E=0.7; rpm=1;
 T = (I * V * E *60) / (rpm*2*pi);
-
-% lmt=0.8;T=filtro_T(T,n,lmt); plot(T) % lmt=limite corte do torque
 
 % Tamanho da amostra a ser usada no LM.
 tam=n-size(dyy2); k=tam(1); passo=10; tam=10000; j=1;

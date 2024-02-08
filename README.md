@@ -4,4 +4,4 @@
     - Para executar o algoritmo de identificação, basta baixar a pasta "Gearbox.rar", descompactar e executar o "programa_principal.m"
 - Os programas com extensão ".ipynb" são respectivos à geração de geometria, análise de atrito e análise de contato.
     - Esses programas em Python podem ser executados pelo Google Colaboratory diretamente no google Drive. Basta entrar no link abaixo, clicar em "abrir com" e escolher o google colaboratory.
-    - https://drive.google.com/drive/folders/1LpmhlZoUYxHPiLrj18H_t_tnBaTS78SV?usp=sharing
+    - [https://drive.google.com/drive/folders/1LpmhlZoUYxHPiLrj18H_t_tnBaTS78SV?usp=sharing](https://drive.google.com/drive/folders/1izOqva5udncij1EhvZ6EmWr3Ys7D3vEJ?usp=drive_link)https://drive.google.com/drive/folders/1izOqva5udncij1EhvZ6EmWr3Ys7D3vEJ?usp=drive_link

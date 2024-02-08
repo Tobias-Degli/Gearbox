@@ -3,5 +3,5 @@
     - Os dados experimentais na íntegra estão no arquivo "data.mat". O processamento desses dados é demorado, e para facilitar a execução do algoritmo de Levemberg-Marquardt, os dados foram discretizados e salvos na forma de sinal digital no arquivo "incr1.mat" para o encoder A e "incr2.mat" para o encoder B.
     - Para executar o algoritmo de identificação, basta baixar a pasta "Gearbox.rar", descompactar e executar o "programa_principal.m"
 - Os programas com extensão ".ipynb" são respectivos à geração de geometria, análise de atrito e análise de contato.
-    - Esses programas em Python podem ser executados pelo Google Colaboratory. Basta clicar em "abrir com" e escolher o google colaboratory.
+    - Esses programas em Python podem ser executados pelo Google Colaboratory diretamente no google Drive. Basta clicar em "abrir com" o link[- https://drive.google.com/drive/folders/1LpmhlZoUYxHPiLrj18H_t_tnBaTS78SV?usp=sharing]{a} e escolher o google colaboratory.
     - https://drive.google.com/drive/folders/1LpmhlZoUYxHPiLrj18H_t_tnBaTS78SV?usp=sharing
